@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <style>
+    .aa {
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- position-relatve를 사용하면 자식 div가 부모 밖으로 나가지 않음 -->
+  <div class="position-relatve bg-danger m-5" style="width:500px; height: 500px;">
+    <!-- 중앙에 위치하기 위해선 top start translate를 사용해야함, bottom end로는 불가능 -->
+    <div class="position-absolute top-50 start-50 translate-middle bg-black" style="width: 50px; height: 50px;">
+    </div>
+  </div>
+
+  <button class="btn btn-primary position-relative m-5">이메일
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">+99</span>
+  </button>
+
+  <div class="text-bg-dark mb-5 mt-3 w-25 py-2 px-4 rounded-pill text-center position-relative">
+    Maker
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1"
+      fill="var(--bs-dark)" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.6591-4.796 5.48a1 1 0 0 1-1.506 0z" />
+    </svg>
+  </div>
+
+  <div class="position-relative mx-4 mb-4">
+    <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0"
+      aria-valuemax="100" style="height: 1px;">
+      <div class="progress-bar" style="width: 50%"></div>
+    </div>
+    <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill"
+      style="width: 2rem; height:2rem;">1</button>
+    <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill"
+      style="width: 2rem; height:2rem;">2</button>
+    <button type="button"
+      class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill"
+      style="width: 2rem; height:2rem;">3</button>
+  </div>
+
+</body>
+
+</html>
